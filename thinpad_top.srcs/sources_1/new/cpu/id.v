@@ -5,6 +5,14 @@ module id(
 	input wire[`inst_addr_bus] pc_i,
 	input wire[`inst_bus] inst_i,
 
+	input wire ex_wreg_i,
+	input wire[`reg_bus] ex_wdata_i,
+	input wire[`reg_addr_bus] ex_wd_i,
+
+	input wire mem_wreg_i,
+	input wire[`reg_bus] mem_wdata_i,
+	input wire[`reg_addr_bus] mem_wd_i,
+
 	input wire[`reg_bus] reg1_data_i,
 	input wire[`reg_bus] reg2_data_i,
 
@@ -71,6 +79,12 @@ end
 always@(*)begin
 	if(rst == `rst_enable)begin
 		reg1_o <= `zero_word;
+	end else if((reg1_read_o == 1'b1) && (ex_wreg_i == 1'b1)
+				&& (ex_wd_i == reg1_addr_o))begin
+		reg1_o <= ex_wdata_i;
+	end else if((reg1_read_o == 1'b1) && (mem_wreg_i == 1'b1)
+				&& (mem_wd_i == reg1_addr_o))begin
+		reg1_o <= mem_wdata_i;
 	end else if(reg1_read_o == 1'b1)begin
 		reg1_o <= reg1_data_i;
 	end else if(reg1_read_o == 1'b0)begin
@@ -83,6 +97,12 @@ end
 always@(*)begin
 	if(rst == `rst_enable)begin
 		reg2_o <= `zero_word;
+	end else if((reg2_read_o == 1'b1) && (ex_wreg_i == 1'b1)
+				&& (ex_wd_i == reg2_addr_o))begin
+		reg2_o <= ex_wdata_i;
+	end else if((reg2_read_o == 1'b1) && (mem_wreg_i == 1'b1)
+				&& (mem_wd_i == reg2_addr_o))begin
+		reg2_o <= mem_wdata_i;
 	end else if(reg2_read_o == 1'b1)begin
 		reg2_o <= reg2_data_i;
 	end else if(reg2_read_o == 1'b0)begin
