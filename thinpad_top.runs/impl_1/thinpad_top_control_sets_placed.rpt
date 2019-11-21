@@ -1,0 +1,150 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Nov  1 17:17:17 2019
+| Host         : andy-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file thinpad_top_control_sets_placed.rpt
+| Design       : thinpad_top
+| Device       : xc7a100t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    80 |
+| Unused register locations in slices containing registers |   437 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            6 |
+|      2 |           61 |
+|      4 |            2 |
+|      8 |            5 |
+|     11 |            3 |
+|     12 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              34 |           12 |
+| No           | No                    | Yes                    |              80 |           45 |
+| No           | Yes                   | No                     |              74 |           34 |
+| Yes          | No                    | No                     |              72 |           26 |
+| Yes          | No                    | Yes                    |               4 |            3 |
+| Yes          | Yes                   | No                     |              11 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+---------------------------------------------------+---------------------------------------------+------------------+----------------+
+|          Clock Signal          |                   Enable Signal                   |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++--------------------------------+---------------------------------------------------+---------------------------------------------+------------------+----------------+
+|  clk_11M0592_IBUF_BUFG         | uart_r                                            |                                             |                1 |              1 |
+|  clk_11M0592_IBUF_BUFG         | p_2_in__0[1]                                      |                                             |                1 |              1 |
+|  clk_11M0592_IBUF_BUFG         | p_2_in__0[2]                                      |                                             |                1 |              1 |
+|  clk_11M0592_IBUF_BUFG         | uart_w_i_1_n_0                                    |                                             |                1 |              1 |
+|  clk_50M_IBUF_BUFG             | ext_uart_r/tickgen/OversamplingTick               |                                             |                1 |              1 |
+|  clk_50M_IBUF_BUFG             | vga800x600at75/vdata                              |                                             |                1 |              1 |
+|  init_addr_reg[18]_LDC_i_1_n_0 |                                                   | init_addr_reg[18]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[19]_LDC_i_1_n_0 |                                                   | init_addr_reg[19]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[1]_LDC_i_1_n_0  |                                                   | init_addr_reg[1]_LDC_i_2_n_0                |                2 |              2 |
+|  init_addr_reg[2]_LDC_i_1_n_0  |                                                   | init_addr_reg[2]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   |                                             |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[13]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[13]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[14]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[14]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[15]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[15]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[16]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[16]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[17]_LDC_i_1_n_0               |                2 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[17]_LDC_i_2_n_0               |                2 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[18]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[18]_LDC_i_2_n_0               |                2 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[19]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[1]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[1]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[4]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[2]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[0]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[0]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[10]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[11]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[11]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[12]_LDC_i_1_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[12]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[19]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[2]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[3]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[5]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[5]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[10]_LDC_i_2_n_0               |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[6]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[7]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[7]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[8]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[8]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[9]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[9]_LDC_i_2_n_0                |                2 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[4]_LDC_i_1_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[3]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         |                                                   | init_addr_reg[6]_LDC_i_1_n_0                |                2 |              2 |
+|  init_addr_reg[13]_LDC_i_1_n_0 |                                                   | init_addr_reg[13]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[14]_LDC_i_1_n_0 |                                                   | init_addr_reg[14]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[15]_LDC_i_1_n_0 |                                                   | init_addr_reg[15]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[0]_LDC_i_1_n_0  |                                                   | init_addr_reg[0]_LDC_i_2_n_0                |                1 |              2 |
+|  init_addr_reg[16]_LDC_i_1_n_0 |                                                   | init_addr_reg[16]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[17]_LDC_i_1_n_0 |                                                   | init_addr_reg[17]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[4]_LDC_i_1_n_0  |                                                   | init_addr_reg[4]_LDC_i_2_n_0                |                1 |              2 |
+|  init_addr_reg[10]_LDC_i_1_n_0 |                                                   | init_addr_reg[10]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[11]_LDC_i_1_n_0 |                                                   | init_addr_reg[11]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[12]_LDC_i_1_n_0 |                                                   | init_addr_reg[12]_LDC_i_2_n_0               |                1 |              2 |
+|  init_addr_reg[3]_LDC_i_1_n_0  |                                                   | init_addr_reg[3]_LDC_i_2_n_0                |                1 |              2 |
+|  init_addr_reg[5]_LDC_i_1_n_0  |                                                   | init_addr_reg[5]_LDC_i_2_n_0                |                2 |              2 |
+|  init_addr_reg[6]_LDC_i_1_n_0  |                                                   | init_addr_reg[6]_LDC_i_2_n_0                |                1 |              2 |
+|  init_addr_reg[7]_LDC_i_1_n_0  |                                                   | init_addr_reg[7]_LDC_i_2_n_0                |                2 |              2 |
+|  init_addr_reg[8]_LDC_i_1_n_0  |                                                   | init_addr_reg[8]_LDC_i_2_n_0                |                1 |              2 |
+|  init_addr_reg[9]_LDC_i_1_n_0  |                                                   | init_addr_reg[9]_LDC_i_2_n_0                |                1 |              2 |
+|  clk_11M0592_IBUF_BUFG         | count[3]_i_1_n_0                                  |                                             |                2 |              4 |
+|  clk_11M0592_IBUF_BUFG         | FSM_sequential_state[3]_i_1_n_0                   | reset_btn_IBUF                              |                3 |              4 |
+|  clk_50M_IBUF_BUFG             | ext_uart_t/FSM_onehot_TxD_state_reg[0]_0[0]       |                                             |                1 |              8 |
+|  clk_50M_IBUF_BUFG             | ext_uart_r/tickgen/FSM_onehot_RxD_state_reg[2][0] |                                             |                1 |              8 |
+|  clk_11M0592_IBUF_BUFG         | data__0[7]                                        |                                             |                8 |              8 |
+|  clk_50M_IBUF_BUFG             | ext_uart_r/E[0]                                   |                                             |                1 |              8 |
+|  clk_50M_IBUF_BUFG             | ext_uart_t/tickgen/Acc_reg[21]_0[0]               |                                             |                2 |              8 |
+|  clk_50M_IBUF_BUFG             | vga800x600at75/vdata                              | vga800x600at75/vdata[11]_i_1_n_0            |                3 |             11 |
+|  clk_50M_IBUF_BUFG             | ext_uart_r/tickgen/RxD_bit_reg_0[0]               |                                             |                3 |             11 |
+|  clk_50M_IBUF_BUFG             | ext_uart_t/tickgen/E[0]                           |                                             |                2 |             11 |
+|  clk_50M_IBUF_BUFG             |                                                   | vga800x600at75/hdata[11]_i_1_n_0            |                4 |             12 |
+|  clk_50M_IBUF_BUFG             |                                                   | ext_uart_t/FSM_onehot_TxD_state_reg_n_0_[0] |                7 |             22 |
+|  clk_50M_IBUF_BUFG             |                                                   |                                             |               11 |             32 |
++--------------------------------+---------------------------------------------------+---------------------------------------------+------------------+----------------+
+
+

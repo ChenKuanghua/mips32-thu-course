@@ -1,0 +1,269 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Nov  1 17:18:02 2019
+| Host         : andy-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_drc -file thinpad_top_drc_routed.rpt -pb thinpad_top_drc_routed.pb -rpx thinpad_top_drc_routed.rpx
+| Design       : thinpad_top
+| Device       : xc7a100tfgg676-2L
+| Speed File   : -2L
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 45
++----------+----------+---------------------------------+------------+
+| Rule     | Severity | Description                     | Violations |
++----------+----------+---------------------------------+------------+
+| PDRC-153 | Warning  | Gated clock check               | 20         |
+| PLCK-12  | Warning  | Clock Placer Checks             | 1          |
+| RPBF-3   | Warning  | IO port buffering is incomplete | 24         |
++----------+----------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net init_addr_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[0]_LDC_i_1/O, cell init_addr_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net init_addr_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[10]_LDC_i_1/O, cell init_addr_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net init_addr_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[11]_LDC_i_1/O, cell init_addr_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net init_addr_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[12]_LDC_i_1/O, cell init_addr_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net init_addr_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[13]_LDC_i_1/O, cell init_addr_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net init_addr_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[14]_LDC_i_1/O, cell init_addr_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net init_addr_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[15]_LDC_i_1/O, cell init_addr_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net init_addr_reg[16]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[16]_LDC_i_1/O, cell init_addr_reg[16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net init_addr_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[17]_LDC_i_1/O, cell init_addr_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net init_addr_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[18]_LDC_i_1/O, cell init_addr_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net init_addr_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[19]_LDC_i_1/O, cell init_addr_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net init_addr_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[1]_LDC_i_1/O, cell init_addr_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net init_addr_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[2]_LDC_i_1/O, cell init_addr_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net init_addr_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[3]_LDC_i_1/O, cell init_addr_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net init_addr_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[4]_LDC_i_1/O, cell init_addr_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net init_addr_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[5]_LDC_i_1/O, cell init_addr_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net init_addr_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[6]_LDC_i_1/O, cell init_addr_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net init_addr_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[7]_LDC_i_1/O, cell init_addr_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net init_addr_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[8]_LDC_i_1/O, cell init_addr_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net init_addr_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin init_addr_reg[9]_LDC_i_1/O, cell init_addr_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	clk_11M0592_IBUF_inst (IBUF.O) is locked to C18
+	clk_11M0592_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
+
+Related violations: <none>
+
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[10] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#2 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[11] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#3 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[12] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#4 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[13] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#5 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[14] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#6 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[15] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#7 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[16] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#8 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[17] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#9 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[18] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#10 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[19] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#11 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[20] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#12 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[21] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#13 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[22] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#14 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[23] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#15 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[24] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#16 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[25] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#17 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[26] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#18 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[27] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#19 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[28] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#20 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[29] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#21 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[30] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#22 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[31] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#23 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[8] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+RPBF-3#24 Warning
+IO port buffering is incomplete  
+Device port base_ram_data[9] expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
+
