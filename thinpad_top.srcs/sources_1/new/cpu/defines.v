@@ -26,16 +26,54 @@
 `define chip_disable 1'b0
 
 //op_code
+`define exe_and 6'b100100
+`define exe_or  6'b100101
+`define exe_xor 6'b100110
+`define exe_nor 6'b100111
+`define exe_andi 6'b001100
+`define exe_xori 6'b001110
+`define exe_lui 6'b001111
 `define exe_ori 6'b001101
+
+`define exe_sll 6'b000000
+`define exe_sllv 6'b000100
+`define exe_srl 6'b000010
+`define exe_srlv 6'b000110
+`define exe_sra 6'b000011
+`define exe_srav 6'b000111
+`define exe_sync 6'b001111
+`define exe_pref 6'b110011
+
 `define exe_nop 6'b000000
 
+`define ssnop 32'b00000000000000000000000001000000
+`define exe_special_inst 6'b000000
+`define exe_regimm_inst 6'b000001
+`define exe_special2_inst 6'b011100
+
 //alu_op
+`define exe_and_op 8'b00100100
 `define exe_or_op 8'b00100101
+`define exe_xor_op 8'b00100110
+`define exe_nor_op 8'b00100111
+`define exe_andi_op 8'b01011001
 `define exe_ori_op 8'b01011010
+`define exe_xori_op 8'b01011011
+`define exe_lui_op 8'b01011100
+
+`define exe_sll_op 8'b01111100
+`define exe_sllv_op 8'b00000100
+`define exe_srl_op 8'b00000010
+`define exe_srlv_op 8'b00000110
+`define exe_sra_op 8'b00000011
+`define exe_srav_op 8'b00000111
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
 `define exe_res_logic 3'b001
+`dfeine exe_res_shift 3'b010
+
 `define exe_res_nop 3'b000
 
 //length
