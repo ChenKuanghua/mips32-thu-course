@@ -78,7 +78,7 @@ always@(*)begin
 								alusel_o <= `exe_res_logic;
 								reg1_read_o <= 1'b1;
 								reg2_read_o <= 1'b1;
-								inst_valid <= `inst_vaild;
+								inst_valid <= `inst_valid;
 							end
 							`exe_xor:begin
 								wreg_o <= `write_enable;
@@ -86,7 +86,7 @@ always@(*)begin
 								alusel_o <= `exe_res_logic;
 								reg1_read_o <= 1'b1;
 								reg2_read_o <= 1'b1;
-								inst_vaild <= `inst_vaild;
+								inst_valid <= `inst_valid;
 							end
 							`exe_nor:begin
 								wreg_o <= `write_enable;
@@ -107,7 +107,7 @@ always@(*)begin
 							`exe_srlv:begin
 								wreg_o <= `write_enable;
 								aluop_o <= `exe_srl_op;
-								alusel_o <= `exe_res_logic;
+								alusel_o <= `exe_res_shift;
 								reg1_read_o <= 1'b1;
 								reg2_read_o <= 1'b1;
 								inst_valid <= `inst_valid;
@@ -115,7 +115,7 @@ always@(*)begin
 							`exe_srav:begin
 								wreg_o <= `write_enable;
 								aluop_o <= `exe_sra_op;
-								alusel_o <= `exe_res_logic;
+								alusel_o <= `exe_res_shift;
 								reg1_read_o <= 1'b1;
 								reg2_read_o <= 1'b1;
 								inst_valid <= `inst_valid;

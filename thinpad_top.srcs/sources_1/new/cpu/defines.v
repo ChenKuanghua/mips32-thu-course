@@ -72,7 +72,7 @@
 
 //alu_sel
 `define exe_res_logic 3'b001
-`dfeine exe_res_shift 3'b010
+`define exe_res_shift 3'b010
 
 `define exe_res_nop 3'b000
 
