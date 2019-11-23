@@ -10,6 +10,21 @@ module ex(
 	input wire[`reg_addr_bus] wd_i,
 	input wire wreg_i,
 
+	input wire[`reg_bus] hi_i,
+	input wire[`reg_bus] lo_i,
+
+	input wire[`reg_bus] wb_hi_i,
+	input wire[`reg_bus] wb_lo_i,
+	input wire wb_whilo_i,
+
+	input wire[`reg_bus] mem_hi_i,
+	input wire[`reg_bus] mem_lo_i,
+	input wire mem_whilo_i,
+
+	output reg[`reg_bus] hi_o,
+	output reg[`reg_bus] lo_o,
+	output reg whilo_o,
+
 	output reg[`reg_addr_bus] wd_o,
 	output reg wreg_o,
 	output reg[`reg_bus] wdata_o
@@ -17,6 +32,9 @@ module ex(
 
 reg[`reg_bus] logic_out;
 reg[`reg_bus] shift_res;
+reg[`reg_bus] move_res;
+reg[`reg_bus] HI;
+reg[`reg_bus] LO;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -64,6 +82,62 @@ always@(*)begin
 end
 
 always@(*)begin
+	if(rst == `rst_enable)begin
+		{HI, LO} <= {`zero_word, `zero_word};
+	end else if(mem_whilo_i == `write_enable)begin
+		{HI, LO} <= {mem_hi_i, mem_lo_i};
+	end else if(wb_whilo_i == `write_enable)begin
+		{HI, LO} <= {wb_hi_i, wb_lo_i};
+	end else begin
+		{HI, LO} <= {hi_i, lo_i};
+	end
+end
+
+always@(*)begin
+	if(rst == `rst_enable)begin
+		move_res <= `zero_word;
+	end else begin
+		move_res <= `zero_word;
+		case(aluop_i)
+			`exe_mfhi_op:begin
+				move_res <= HI;
+			end
+			`exe_mflo_op:begin
+				move_res <= LO;
+			end
+			`exe_movz_op:begin
+				move_res <= reg1_i;
+			end
+			`exe_movn_op:begin
+				move_res <= reg1_i;
+			end
+			default:begin
+			end
+		endcase
+	end
+end
+
+always@(*)begin
+	if(rst == `rst_enable)begin
+		whilo_o <= `write_disable;
+		hi_o <= `zero_word;
+		lo_o <= `zero_word;
+	end else if(aluop_i == `exe_mthi_op)begin
+		whilo_o <= `write_enable;
+		hi_o <= reg1_i;
+		lo_o <= LO;
+	end else if(aluop_i == `exe_mtlo_op)begin
+		whilo_o <= `write_enable;
+		hi_o <= HI;
+		lo_o <= reg1_i;
+	end else begin
+		whilo_o <= `write_disable;
+		hi_o <= `zero_word;
+		lo_o <= `zero_word;
+	end
+end
+
+always@(*)begin
 	wd_o <= wd_i;
 	wreg_o <= wreg_i;
 	case(alusel_i)
@@ -72,6 +146,9 @@ always@(*)begin
 		end
 		`exe_res_shift:begin
 			wdata_o <= shift_res;
+		end
+		`exe_res_move:begin
+			wdata_o <= move_res;
 		end
 		default:begin
 			wdata_o <= `zero_word;

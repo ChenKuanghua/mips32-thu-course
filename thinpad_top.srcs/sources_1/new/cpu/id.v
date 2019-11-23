@@ -128,6 +128,60 @@ always@(*)begin
 								reg2_read_o <= 1'b1;
 								inst_valid <= `inst_valid;
 							end
+							`exe_mfhi:begin
+								wreg_o <=`write_enable;
+								aluop_o <= `exe_mfhi_op;
+								alusel_o <= `exe_res_move;
+								reg1_read_o <= 1'b0;
+								reg2_read_o <= 1'b0;
+								inst_valid <= `inst_valid;
+							end
+							`exe_mflo:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_mflo_op;
+								alusel_o <= `exe_res_move;
+								reg1_read_o <= 1'b0;
+								reg2_read_o <= 1'b0;
+								inst_valid <= `inst_valid;
+							end
+							`exe_mthi:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_mthi_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b0;
+								inst_valid <= `inst_valid;
+							end
+							`exe_mtlo:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_mtlo_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b0;
+								inst_valid <= `inst_valid;
+							end
+							`exe_movn:begin
+								aluop_o <= `exe_movn_op;
+								alusel_o <= `exe_res_move;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+								if(reg2_o != `zero_word)begin
+									wreg_o <= `write_enable;
+								end else begin
+									wreg_o <= `write_disable;
+								end
+							end
+							`exe_movz:begin
+								aluop_o <= `exe_movz_op;
+								alusel_o <= `exe_res_move;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+								if(reg2_o == `zero_word)begin
+									wreg_o <= `write_enable;
+								end else begin
+									wreg_o <= `write_disable;
+								end
+							end
 							default:begin
 							end
 						endcase

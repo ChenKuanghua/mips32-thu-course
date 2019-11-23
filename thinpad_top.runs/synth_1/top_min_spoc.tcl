@@ -32,6 +32,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/defines.v
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v
+  C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/hilo_reg.v
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id_ex.v
   C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/if_id.v

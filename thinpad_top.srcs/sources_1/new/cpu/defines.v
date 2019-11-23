@@ -44,9 +44,16 @@
 `define exe_sync 6'b001111
 `define exe_pref 6'b110011
 
-`define exe_nop 6'b000000
+`define exe_movz 6'b001010
+`define exe_movn 6'b001011
+`define exe_mfhi 6'b010000
+`define exe_mthi 6'b010001
+`define exe_mflo 6'b010010
+`define exe_mtlo 6'b010011
 
+`define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
+
 `define exe_special_inst 6'b000000
 `define exe_regimm_inst 6'b000001
 `define exe_special2_inst 6'b011100
@@ -68,11 +75,19 @@
 `define exe_sra_op 8'b00000011
 `define exe_srav_op 8'b00000111
 
+`define exe_movz_op 8'b00001010
+`define exe_movn_op 8'b00001011 
+`define exe_mfhi_op 8'b00010000 
+`define exe_mthi_op 8'b00010001 
+`define exe_mflo_op 8'b00010010 
+`define exe_mtlo_op 8'b00010011 
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
 `define exe_res_logic 3'b001
 `define exe_res_shift 3'b010
+`define exe_res_move 3'b011
 
 `define exe_res_nop 3'b000
 
