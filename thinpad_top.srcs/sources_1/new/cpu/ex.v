@@ -24,6 +24,9 @@ module ex(
 	input wire[`double_reg_bus] hilo_tmp_i,
 	input wire[1:0] cnt_i,
 
+	input wire[`double_reg_bus] div_result_i,
+	input wire div_ready_i,
+
 	output reg[`reg_addr_bus] wd_o,
 	output reg wreg_o,
 	output reg[`reg_bus] wdata_o,
@@ -34,6 +37,11 @@ module ex(
 
 	output reg[`double_reg_bus] hilo_tmp_o,
 	output reg[1:0] cnt_o,
+
+	output reg[`reg_bus] div_opdata1_o,
+	output reg[`reg_bus] div_opdata2_o,
+	output reg div_start_o,
+	output reg signed_div_o,
 
 	output reg stallreq
 );
@@ -56,6 +64,7 @@ wire[`reg_bus] opdata2_mult;
 wire[`double_reg_bus] hilo_tmp;
 reg[`double_reg_bus] hilo_tmp1;
 reg stallreq_for_madd_msub;
+reg stallreq_for_div;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -125,9 +134,10 @@ always@(*)begin
 end
 
 always@(*)begin
-	stallreq = stallreq_for_madd_msub;
+	stallreq = stallreq_for_madd_msub || stallreq_for_div;
 end
 
+//MADD MADDU MSUB MSUBU
 always@(*)begin
 	if(rst == `rst_enable)begin
 		hilo_tmp_o <= {`zero_word, `zero_word};
@@ -164,6 +174,69 @@ always@(*)begin
 				hilo_tmp_o <= {`zero_word, `zero_word};
 				cnt_o <= 2'b00;
 				stallreq_for_madd_msub <= `no_stop;
+			end
+		endcase
+	end
+end
+
+//DIV DIVU
+always@(*)begin
+	if(rst == `rst_enable)begin
+		stallreq_for_div <= `no_stop;
+		div_opdata1_o <= `zero_word;
+		div_opdata2_o <= `zero_word;
+		div_start_o <= `div_stop;
+		signed_div_o <= 1'b0;
+	end else begin
+		stallreq_for_div <= `no_stop;
+		div_opdata1_o <= `zero_word;
+		div_opdata2_o <= `zero_word;
+		div_start_o <= `div_stop;
+		signed_div_o <= 1'b0;
+		case(aluop_i)
+			`exe_div_op:begin
+				if(div_ready_i == `div_result_not_ready)begin
+					div_opdata1_o <= reg1_i;
+					div_opdata2_o <= reg2_i;
+					div_start_o <= `div_start;
+					signed_div_o <= 1'b1;
+					stallreq_for_div <= `stop;
+				end else if(div_ready_i == `div_result_ready)begin
+					div_opdata1_o <= reg1_i;
+					div_opdata2_o <= reg2_i;
+					div_start_o <= `div_stop;
+					signed_div_o <= 1'b1;
+					stallreq_for_div <= `no_stop;
+				end else begin
+					div_opdata1_o <= `zero_word;
+					div_opdata2_o <= `zero_word;
+					div_start_o <= `div_stop;
+					signed_div_o <= 1'b0;
+					stallreq_for_div <= `no_stop;
+				end
+			end
+			`exe_divu_op:begin
+				if(div_ready_i == `div_result_not_ready)begin
+					div_opdata1_o <= reg1_i;
+					div_opdata2_o <= reg2_i;
+					div_start_o <= `div_start;
+					signed_div_o <= 1'b0;
+					stallreq_for_div <= `stop;
+				end else if(div_ready_i == `div_result_ready)begin
+					div_opdata1_o <= reg1_i;
+					div_opdata2_o <= reg2_i;
+					div_start_o <= `div_stop;
+					signed_div_o <= 1'b0;
+					stallreq_for_div <= `no_stop;
+				end else begin
+					div_opdata1_o <= `zero_word;
+					div_opdata2_o <= `zero_word;
+					div_start_o <= `div_stop;
+					signed_div_o <= 1'b0;
+					stallreq_for_div <= `no_stop;
+				end
+			end
+			default:begin
 			end
 		endcase
 	end
@@ -278,6 +351,10 @@ always@(*)begin
 		whilo_o <= `write_enable;
 		hi_o <= hilo_tmp1[63:32];
 		lo_o <= hilo_tmp1[31:0];
+	end else if((aluop_i == `exe_div_op) || (aluop_i == `exe_divu_op))begin
+		whilo_o <= `write_enable;
+		hi_o <= div_result_i[63:32];
+		lo_o <= div_result_i[31:0];
 	end else if(aluop_i == `exe_mthi_op)begin
 		whilo_o <= `write_enable;
 		hi_o <= reg1_i;

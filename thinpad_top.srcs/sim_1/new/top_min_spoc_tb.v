@@ -31,7 +31,7 @@ end
 initial begin
     rst = 1'b1;
     #195 rst = 1'b0;
-    #1500 $stop;
+    #3000 $stop;
 end
 
 top_min_spoc top_min_spoc0(

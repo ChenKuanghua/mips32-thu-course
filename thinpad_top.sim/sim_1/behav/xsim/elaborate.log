@@ -12,6 +12,7 @@ WARNING: [XSIM 43-4099] "C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.src
 WARNING: [XSIM 43-4099] "C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v" Line 3. Module ex_mem doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/hilo_reg.v" Line 3. Module hilo_reg doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ctrl.v" Line 3. Module ctrl doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v" Line 3. Module div doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.pc_reg
@@ -25,6 +26,7 @@ Compiling module xil_defaultlib.mem
 Compiling module xil_defaultlib.mem_wb
 Compiling module xil_defaultlib.hilo_reg
 Compiling module xil_defaultlib.ctrl
+Compiling module xil_defaultlib.div
 Compiling module xil_defaultlib.top
 Compiling module xil_defaultlib.inst_rom
 Compiling module xil_defaultlib.top_min_spoc

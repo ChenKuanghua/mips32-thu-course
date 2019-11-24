@@ -72,6 +72,9 @@
 `define exe_msub 6'b000100 
 `define exe_msubu 6'b000101
 
+`define exe_div 6'b011010 
+`define exe_divu 6'b011011 
+
 `define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
 
@@ -124,6 +127,9 @@
 `define exe_msub_op 8'b10101010 
 `define exe_msubu_op 8'b10101011 
 
+`define exe_div_op 8'b00011010 
+`define exe_divu_op 8'b00011011 
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
@@ -148,3 +154,13 @@
 `define reg_num 32
 `define reg_num_log2 5
 `define nop_reg_addr 5'b00000
+
+//div
+`define div_free 2'b00 
+`define div_by_zero 2'b01 
+`define div_on 2'b10 
+`define div_end 2'b11 
+`define div_result_ready 1'b1 
+`define div_result_not_ready 1'b0 
+`define div_start 1'b1
+`define div_stop 1'b0

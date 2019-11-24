@@ -1,0 +1,485 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Nov 24 14:32:46 2019
+# Process ID: 2216
+# Current directory: C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/impl_1
+# Command line: vivado.exe -log top_min_spoc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top_min_spoc.tcl -notrace
+# Log file: C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/impl_1/top_min_spoc.vdi
+# Journal file: C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source top_min_spoc.tcl -notrace
+Command: link_design -top top_min_spoc -part xc7a100tfgg676-2L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk_50M'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_11M0592'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clk_11M0592_IBUF'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk_50M'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_50M]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:6]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'clk_11M0592'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:7]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk_11M0592]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:7]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'touch_btn[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clock_btn'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'reset_btn'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clock_btn_IBUF'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'reset_btn_IBUF'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_wrn'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_rdn'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_tbre'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_tsre'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_dataready'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'txd'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rxd'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_a0'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_wr_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_rd_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_cs_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_rst_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_drq_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_dack_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sl811_intrq'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_iow_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_ior_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cs_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_pwrst_n'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_int'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_cmd'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[4]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[5]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[6]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[7]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[8]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[9]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[10]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[11]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[12]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[13]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[14]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dm9k_sd[15]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_clk'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_red[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_green[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_blue[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_blue[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_hsync'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_vsync'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'video_de'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[4]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[5]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[6]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[7]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[8]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[9]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[10]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[11]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[12]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[13]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[14]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[15]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[4]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[5]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[6]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy0[7]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[4]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[5]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[6]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dpy1[7]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[0]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[1]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[2]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[3]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[4]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[5]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[6]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[7]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'dip_sw[8]'. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:127]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc:127]
+Finished Parsing XDC File [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 547.848 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+7 Infos, 103 Warnings, 102 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 547.848 ; gain = 287.961
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.307 . Memory (MB): peak = 549.051 ; gain = 1.203
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1012.426 ; gain = 463.375
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1108.016 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1108.016 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1108.016 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.016 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.016 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: e96d68eb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 103 Warnings, 102 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1108.016 ; gain = 560.168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.016 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1108.613 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/impl_1/top_min_spoc_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_min_spoc_drc_opted.rpt -pb top_min_spoc_drc_opted.pb -rpx top_min_spoc_drc_opted.rpx
+Command: report_drc -file top_min_spoc_drc_opted.rpt -pb top_min_spoc_drc_opted.pb -rpx top_min_spoc_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/impl_1/top_min_spoc_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1121.418 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1121.418 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1121.418 ; gain = 0.000
+ERROR: [Place 30-494] The design is empty
+Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
+Ending Placer Task | Checksum: 00000000
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1121.418 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 103 Warnings, 102 Critical Warnings and 2 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 24 14:33:17 2019...

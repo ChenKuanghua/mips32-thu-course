@@ -248,6 +248,20 @@ always@(*)begin
 								reg2_read_o <= 1'b1;
 								inst_valid <= `inst_valid;
 							end
+							`exe_div:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_div_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_divu:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_divu_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
 							default:begin
 							end
 						endcase
