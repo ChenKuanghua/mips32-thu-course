@@ -51,6 +51,23 @@
 `define exe_mflo 6'b010010
 `define exe_mtlo 6'b010011
 
+`define exe_slt 6'b101010 
+`define exe_sltu 6'b101011
+`define exe_slti 6'b001010 
+`define exe_sltiu 6'b001011 
+`define exe_add 6'b100000 
+`define exe_addu 6'b100001 
+`define exe_sub 6'b100010 
+`define exe_subu 6'b100011 
+`define exe_addi 6'b001000 
+`define exe_addiu 6'b001001 
+`define exe_clz 6'b100000 
+`define exe_clo 6'b100001 
+
+`define exe_mult 6'b011000 
+`define exe_multu 6'b011001 
+`define exe_mul 6'b000010 
+
 `define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
 
@@ -82,12 +99,31 @@
 `define exe_mflo_op 8'b00010010 
 `define exe_mtlo_op 8'b00010011 
 
+`define exe_slt_op 8'b00001010 
+`define exe_sltu_op 8'b00101011 
+`define exe_slti_op 8'b01010111 
+`define exe_sltiu_op 8'b01011000 
+`define exe_add_op 8'b00100000 
+`define exe_addu_op 8'b00100001 
+`define exe_sub_op 8'b00100010
+`define exe_subu_op 8'b00100011 
+`define exe_addi_op 8'b01010101 
+`define exe_addiu_op 8'b01010110 
+`define exe_clz_op 8'b10110000 
+`define exe_clo_op 8'b10110001 
+
+`define exe_mult_op 8'b00011000
+`define exe_multu_op 8'b00011001
+`define exe_mul_op 8'b10101001
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
 `define exe_res_logic 3'b001
 `define exe_res_shift 3'b010
 `define exe_res_move 3'b011
+`define exe_res_arithmetic 3'b100 
+`define exe_res_mul 3'b101
 
 `define exe_res_nop 3'b000
 

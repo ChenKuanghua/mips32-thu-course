@@ -182,6 +182,68 @@ always@(*)begin
 									wreg_o <= `write_disable;
 								end
 							end
+							`exe_slt:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_slt_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_sltu:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_sltu_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_add:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_add_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_addu:begin
+								wreg_o <=  `write_enable;
+								aluop_o <= `exe_addu_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_sub:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_sub_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_subu:begin
+								wreg_o <= `write_enable;
+								aluop_o <= `exe_subu_op;
+								alusel_o <= `exe_res_arithmetic;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_mult:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_mult_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
+							`exe_multu:begin
+								wreg_o <= `write_disable;
+								aluop_o <= `exe_multu_op;
+								reg1_read_o <= 1'b1;
+								reg2_read_o <= 1'b1;
+								inst_valid <= `inst_valid;
+							end
 							default:begin
 							end
 						endcase
@@ -229,6 +291,75 @@ always@(*)begin
 				imm <= {inst_i[15:0], 16'h0};
 				wd_o <= inst_i[20:16];
 				inst_valid <= `inst_valid;
+			end
+			`exe_slti:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_slt_op;
+				alusel_o <= `exe_res_arithmetic;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				imm <= {{16{inst_i[15]}}, inst_i[15:0]};
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_sltiu:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_sltu_op;
+				alusel_o <= `exe_res_arithmetic;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				imm <= {{16{inst_i[15]}}, inst_i[15:0]};
+				inst_valid <= `inst_valid;
+			end
+			`exe_addi:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_addi_op;
+				alusel_o <= `exe_res_arithmetic;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				imm <= {{16{inst_i[15]}}, inst_i[15:0]};
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_addiu:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_addiu_op;
+				alusel_o <= `exe_res_arithmetic;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				imm <= {{16{inst_i[15]}}, inst_i[15:0]};
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_special2_inst:begin
+				case(op3)
+					`exe_clz:begin
+						wreg_o <= `write_enable;
+						aluop_o <= `exe_clz_op;
+						alusel_o <= `exe_res_arithmetic;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b0;
+						inst_valid <= `inst_valid;
+					end
+					`exe_clo:begin
+						wreg_o <= `write_enable;
+						aluop_o <= `exe_clo_op;
+						alusel_o <= `exe_res_arithmetic;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b0;
+						inst_valid <= `inst_valid;
+					end
+					`exe_mul:begin
+						wreg_o <= `write_enable;
+						aluop_o <= `exe_mul_op;
+						alusel_o <= `exe_res_mul;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b1;
+						inst_valid <= `inst_valid;
+					end
+					default:begin
+					end
+				endcase
 			end
 			`exe_pref:begin
 				wreg_o <= `write_enable;

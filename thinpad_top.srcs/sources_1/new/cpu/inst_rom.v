@@ -27,7 +27,7 @@ module inst_rom(
     output reg[`inst_bus] inst
 );
 //reg[`inst_bus] inst_mem[0:`inst_mem_num-1];
-reg[`inst_bus] inst_mem[0:30];
+reg[`inst_bus] inst_mem[0:50];
 initial $readmemh("C:/Users/andy/Desktop/inst_rom.data", inst_mem);
 
 always@(*)begin
