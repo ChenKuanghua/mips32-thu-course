@@ -26,7 +26,9 @@ module id(
 	output reg[`reg_bus] reg1_o,
 	output reg[`reg_bus] reg2_o,
 	output reg[`reg_addr_bus] wd_o,
-	output reg wreg_o
+	output reg wreg_o,
+
+	output wire stallreq
 );
 
 wire[5:0] op = inst_i[31:26];
@@ -35,6 +37,8 @@ wire[5:0] op3 = inst_i[5:0];
 wire[4:0] op4 = inst_i[20:16];
 reg[`reg_bus] imm;
 reg inst_valid;
+
+assign stallreq = `no_stop;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -352,6 +356,38 @@ always@(*)begin
 					`exe_mul:begin
 						wreg_o <= `write_enable;
 						aluop_o <= `exe_mul_op;
+						alusel_o <= `exe_res_mul;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b1;
+						inst_valid <= `inst_valid;
+					end
+					`exe_madd:begin
+						wreg_o <= `write_disable;
+						aluop_o <= `exe_madd_op;
+						alusel_o <= `exe_res_mul;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b1;
+						inst_valid <= `inst_valid;
+					end
+					`exe_maddu:begin
+						wreg_o <= `write_disable;
+						aluop_o <= `exe_maddu_op;
+						alusel_o <= `exe_res_mul;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b1;
+						inst_valid <= `inst_valid;
+					end
+					`exe_msub:begin
+						wreg_o <= `write_disable;
+						aluop_o <= `exe_msub_op;
+						alusel_o <= `exe_res_mul;
+						reg1_read_o <= 1'b1;
+						reg2_read_o <= 1'b1;
+						inst_valid <= `inst_valid;
+					end
+					`exe_msubu:begin
+						wreg_o <= `write_disable;
+						aluop_o <= `exe_msubu_op;
 						alusel_o <= `exe_res_mul;
 						reg1_read_o <= 1'b1;
 						reg2_read_o <= 1'b1;

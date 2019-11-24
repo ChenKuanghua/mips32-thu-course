@@ -3,6 +3,8 @@
 module mem_wb(
 	input wire clk,
 	input wire rst,
+
+	input wire[5:0] stall,
 	
 	input wire[`reg_addr_bus] mem_wd,
 	input wire mem_wreg,
@@ -27,7 +29,14 @@ always@(posedge clk)begin
 		wb_hi <= `zero_word;
 		wb_lo <= `zero_word;
 		wb_whilo <= `write_disable;
-	end else begin
+	end else if(stall[4] == `stop && stall[5] == `no_stop)begin
+		wb_wd <= `nop_reg_addr;
+		wb_wreg <= `write_disable;
+		wb_wdata <= `zero_word;
+		wb_hi <= `zero_word;
+		wb_lo <= `zero_word;
+		wb_whilo <= `write_disable;
+	end else if(stall[4] == `no_stop)begin
 		wb_wd <= mem_wd;
 		wb_wreg <= mem_wreg;
 		wb_wdata <= mem_wdata;

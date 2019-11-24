@@ -67,6 +67,10 @@
 `define exe_mult 6'b011000 
 `define exe_multu 6'b011001 
 `define exe_mul 6'b000010 
+`define exe_madd 6'b000000 
+`define exe_maddu 6'b000001 
+`define exe_msub 6'b000100 
+`define exe_msubu 6'b000101
 
 `define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
@@ -115,6 +119,10 @@
 `define exe_mult_op 8'b00011000
 `define exe_multu_op 8'b00011001
 `define exe_mul_op 8'b10101001
+`define exe_madd_op 8'b10100110 
+`define exe_maddu_op 8'b10101000 
+`define exe_msub_op 8'b10101010 
+`define exe_msubu_op 8'b10101011 
 
 `define exe_nop_op 8'b00000000
 

@@ -4,6 +4,8 @@ module id_ex(
 	input wire clk,
 	input wire rst,
 
+	input wire[5:0] stall,
+
 	input wire[`alu_op_bus] id_aluop,
 	input wire[`alu_sel_bus] id_alusel,
 	input wire[`reg_bus] id_reg1,
@@ -27,7 +29,14 @@ always@(posedge clk)begin
 		ex_reg2 <= `zero_word;
 		ex_wd <= `nop_reg_addr;
 		ex_wreg <= `write_disable;
-	end else begin
+	end else if(stall[2] == `stop && stall[3] == `no_stop)begin
+		ex_aluop <= `exe_nop_op;
+		ex_alusel <= `exe_res_nop;
+		ex_reg1 <= `zero_word;
+		ex_reg2 <= `zero_word;
+		ex_wd <= `nop_reg_addr;
+		ex_wreg <= `write_disable;
+	end else if(stall[2] == `no_stop)begin
 		ex_aluop <= id_aluop;
 		ex_alusel <= id_alusel;
 		ex_reg1 <= id_reg1;

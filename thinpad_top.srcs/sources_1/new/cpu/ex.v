@@ -21,13 +21,21 @@ module ex(
 	input wire[`reg_bus] mem_lo_i,
 	input wire mem_whilo_i,
 
+	input wire[`double_reg_bus] hilo_tmp_i,
+	input wire[1:0] cnt_i,
+
+	output reg[`reg_addr_bus] wd_o,
+	output reg wreg_o,
+	output reg[`reg_bus] wdata_o,
+
 	output reg[`reg_bus] hi_o,
 	output reg[`reg_bus] lo_o,
 	output reg whilo_o,
 
-	output reg[`reg_addr_bus] wd_o,
-	output reg wreg_o,
-	output reg[`reg_bus] wdata_o
+	output reg[`double_reg_bus] hilo_tmp_o,
+	output reg[1:0] cnt_o,
+
+	output reg stallreq
 );
 
 reg[`reg_bus] logic_out;
@@ -46,6 +54,8 @@ wire reg1_lt_reg2;
 wire[`reg_bus] opdata1_mult;
 wire[`reg_bus] opdata2_mult;
 wire[`double_reg_bus] hilo_tmp;
+reg[`double_reg_bus] hilo_tmp1;
+reg stallreq_for_madd_msub;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -115,6 +125,51 @@ always@(*)begin
 end
 
 always@(*)begin
+	stallreq = stallreq_for_madd_msub;
+end
+
+always@(*)begin
+	if(rst == `rst_enable)begin
+		hilo_tmp_o <= {`zero_word, `zero_word};
+		cnt_o <= 2'b00;
+		stallreq_for_madd_msub <= `no_stop;
+	end else begin
+		case(aluop_i)
+			`exe_madd_op, `exe_maddu_op:begin
+				if(cnt_i == 2'b00)begin
+					hilo_tmp_o <= mul_res;
+					cnt_o <= 2'b01;
+					stallreq_for_madd_msub <= `stop;
+					hilo_tmp1 <= {`zero_word, `zero_word};
+				end else if(cnt_i == 2'b01)begin
+					hilo_tmp_o <= {`zero_word, `zero_word};
+					cnt_o <= 2'b10;
+					hilo_tmp1 <= hilo_tmp_i+{HI, LO};
+					stallreq_for_madd_msub <= `no_stop;
+				end
+			end
+			`exe_msub_op, `exe_msubu_op:begin
+				if(cnt_i == 2'b00)begin
+					hilo_tmp_o <= ~mul_res+1;
+					cnt_o <= 2'b01;
+					stallreq_for_madd_msub <= `stop;
+				end else if(cnt_i == 2'b01)begin
+					hilo_tmp_o <= {`zero_word, `zero_word};
+					cnt_o <= 2'b10;
+					hilo_tmp1 <= hilo_tmp_i+{HI, LO};
+					stallreq_for_madd_msub <= `no_stop;
+				end
+			end
+			default:begin
+				hilo_tmp_o <= {`zero_word, `zero_word};
+				cnt_o <= 2'b00;
+				stallreq_for_madd_msub <= `no_stop;
+			end
+		endcase
+	end
+end
+
+always@(*)begin
 	if(rst == `rst_enable)begin
 		arithmetic_res <= `zero_word;
 	end else begin
@@ -161,14 +216,17 @@ always@(*)begin
 	end
 end
 
-assign opdata1_mult = (((aluop_i == `exe_mul_op) || (aluop_i == `exe_mult_op)) && (reg1_i[31] == 1'b1)?(~reg1_i+1):reg1_i);
-assign opdata2_mult = (((aluop_i == `exe_mul_op) || (aluop_i == `exe_mult_op)) && (reg2_i[31] == 1'b1)?(~reg2_i+1):reg2_i);
+assign opdata1_mult = (((aluop_i == `exe_mul_op) || (aluop_i == `exe_mult_op)
+						|| (aluop_i == `exe_madd_op) || (aluop_i == `exe_msub_op)) && (reg1_i[31] == 1'b1)?(~reg1_i+1):reg1_i);
+assign opdata2_mult = (((aluop_i == `exe_mul_op) || (aluop_i == `exe_mult_op)
+						|| (aluop_i == `exe_madd_op) || (aluop_i == `exe_msub_op)) && (reg2_i[31] == 1'b1)?(~reg2_i+1):reg2_i);
 assign hilo_tmp = opdata1_mult*opdata2_mult;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
 		mul_res <= {`zero_word, `zero_word};
-	end else if((aluop_i == `exe_mult_op) || (aluop_i == `exe_mul_op))begin
+	end else if((aluop_i == `exe_mult_op) || (aluop_i == `exe_mul_op) ||
+				(aluop_i == `exe_madd_op) || (aluop_i == `exe_msub_op))begin
 		if(reg1_i[31]^reg2_i[31] == 1'b1)begin
 			mul_res <= ~hilo_tmp+1;
 		end else begin
@@ -212,6 +270,14 @@ always@(*)begin
 		whilo_o <= `write_enable;
 		hi_o <= mul_res[63:32];
 		lo_o <= mul_res[31:0];
+	end else if((aluop_i == `exe_madd_op) || (aluop_i == `exe_maddu_op))begin
+		whilo_o <= `write_enable;
+		hi_o <= hilo_tmp1[63:32];
+		lo_o <= hilo_tmp1[31:0];
+	end else if((aluop_i == `exe_msub_op) || (aluop_i == `exe_msubu_op))begin
+		whilo_o <= `write_enable;
+		hi_o <= hilo_tmp1[63:32];
+		lo_o <= hilo_tmp1[31:0];
 	end else if(aluop_i == `exe_mthi_op)begin
 		whilo_o <= `write_enable;
 		hi_o <= reg1_i;

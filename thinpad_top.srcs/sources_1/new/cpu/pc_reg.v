@@ -3,6 +3,7 @@
 module pc_reg(
 	input wire clk,
 	input wire rst,
+	input wire[5:0] stall,
 	output reg[`inst_addr_bus] pc,
 	output reg ce
 );
@@ -10,7 +11,7 @@ module pc_reg(
 always@(posedge clk)begin
 	if(ce == `chip_disable)begin
 		pc <= `zero_word;
-	end else begin
+	end else if(stall[0] == `no_stop)begin
 		pc <= pc+4'h4;
 	end
 end
