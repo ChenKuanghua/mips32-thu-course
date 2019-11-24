@@ -75,6 +75,19 @@
 `define exe_div 6'b011010 
 `define exe_divu 6'b011011 
 
+`define exe_j 6'b000010 
+`define exe_jal 6'b000011 
+`define exe_jalr 6'b001001 
+`define exe_jr 6'b001000 
+`define exe_beq 6'b000100 
+`define exe_bgez 5'b00001
+`define exe_bgezal 5'b10001 
+`define exe_bgtz 6'b000111 
+`define exe_blez 6'b000110 
+`define exe_bltz 5'b00000 
+`define exe_bltzal 5'b10000 
+`define exe_bne 6'b000101
+
 `define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
 
@@ -130,6 +143,19 @@
 `define exe_div_op 8'b00011010 
 `define exe_divu_op 8'b00011011 
 
+`define exe_j_op 8'b01001111 
+`define exe_jal_op 8'b01010000 
+`define exe_jalr_op 8'b00001001 
+`define exe_jr_op 8'b00001000 
+`define exe_beq_op 8'b01010001 
+`define exe_bgez_op 8'b01000001
+`define exe_bgezal_op 8'b01001011 
+`define exe_bgtz_op 8'b01010100 
+`define exe_blez_op 8'b01010100 
+`define exe_bltz_op 8'b01000000 
+`define exe_bltzal_op 8'b01001010 
+`define exe_bne_op 8'b01010010
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
@@ -138,6 +164,7 @@
 `define exe_res_move 3'b011
 `define exe_res_arithmetic 3'b100 
 `define exe_res_mul 3'b101
+`define exe_res_jump_branch 3'b110
 
 `define exe_res_nop 3'b000
 

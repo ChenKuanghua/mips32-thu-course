@@ -27,6 +27,9 @@ module ex(
 	input wire[`double_reg_bus] div_result_i,
 	input wire div_ready_i,
 
+	input wire[`reg_bus] link_address_i,
+	input wire is_in_delayslot_i,
+
 	output reg[`reg_addr_bus] wd_o,
 	output reg wreg_o,
 	output reg[`reg_bus] wdata_o,
@@ -393,6 +396,9 @@ always@(*)begin
 		end
 		`exe_res_mul:begin
 			wdata_o <= mul_res[31:0];
+		end
+		`exe_res_jump_branch:begin
+			wdata_o <= link_address_i;
 		end
 		default:begin
 			wdata_o <= `zero_word;

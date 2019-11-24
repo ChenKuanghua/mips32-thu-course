@@ -19,6 +19,8 @@ wire[`reg_bus] id_reg1_o;
 wire[`reg_bus] id_reg2_o;
 wire id_wreg_o;
 wire[`reg_addr_bus] id_wd_o;
+wire id_is_in_delayslot_o;
+wire[`reg_bus] id_link_address_o;
 
 wire[`alu_op_bus] ex_aluop_i;
 wire[`alu_sel_bus] ex_alusel_i;
@@ -26,6 +28,8 @@ wire[`reg_bus] ex_reg1_i;
 wire[`reg_bus] ex_reg2_i;
 wire ex_wreg_i;
 wire[`reg_addr_bus] ex_wd_i;
+wire ex_is_in_delayslot_i;
+wire[`reg_bus] ex_link_address_i;
 
 wire ex_wreg_o;
 wire[`reg_addr_bus] ex_wd_o;
@@ -79,6 +83,12 @@ wire div_start;
 wire div_annul;
 wire signed_div;
 
+wire is_in_delayslot_i;
+wire is_in_delayslot_o;
+wire next_inst_in_delayslot_o;
+wire id_branch_flag_o;
+wire[`reg_bus] branch_target_address;
+
 wire[5:0] stall;
 wire stallreq_from_id;
 wire stallreq_from_ex;
@@ -87,6 +97,8 @@ pc_reg pc_reg0(
 	.clk(clk),
 	.rst(rst),
 	.stall(stall),
+	.branch_flag_i(id_branch_flag_o),
+	.branch_target_address_i(branch_target_address),
 	.pc(pc),
 	.ce(rom_ce_o)
 );
@@ -119,6 +131,8 @@ id id0(
 	.mem_wdata_i(mem_wdata_o),
 	.mem_wd_i(mem_wd_o),
 
+	.is_in_delayslot_i(is_in_delayslot_i),
+
 	.reg1_read_o(reg1_read),
 	.reg2_read_o(reg2_read),
 	
@@ -131,6 +145,13 @@ id id0(
 	.reg2_o(id_reg2_o),
 	.wd_o(id_wd_o),
 	.wreg_o(id_wreg_o),
+
+	.next_inst_in_delayslot_o(next_inst_in_delayslot_o),
+	.branch_flag_o(id_branch_flag_o),
+	.branch_target_address_o(branch_target_address),
+	.link_addr_o(id_link_address_o),
+
+	.is_in_delayslot_o(id_is_in_delayslot_o),
 
 	.stallreq(stallreq_from_id)
 );
@@ -161,13 +182,19 @@ id_ex id_ex0(
 	.id_reg2(id_reg2_o),
 	.id_wd(id_wd_o),
 	.id_wreg(id_wreg_o),
+	.id_link_address(id_link_address_o),
+	.id_is_in_delayslot(id_is_in_delayslot_o),
+	.next_inst_in_delayslot_i(next_inst_in_delayslot_o),
 
 	.ex_aluop(ex_aluop_i),
 	.ex_alusel(ex_alusel_i),
 	.ex_reg1(ex_reg1_i),
 	.ex_reg2(ex_reg2_i),
 	.ex_wd(ex_wd_i),
-	.ex_wreg(ex_wreg_i)
+	.ex_wreg(ex_wreg_i),
+	.ex_link_address(ex_link_address_i),
+	.ex_is_in_delayslot(ex_is_in_delayslot_i),
+	.is_in_delayslot_o(is_in_delayslot_i)
 );
 
 ex ex0(
@@ -194,6 +221,9 @@ ex ex0(
 
 	.div_result_i(div_result),
 	.div_ready_i(div_ready),
+
+	.link_address_i(ex_link_address_i),
+	.is_in_delayslot_i(ex_is_in_delayslot_i),
 
 	.wd_o(ex_wd_o),
 	.wreg_o(ex_wreg_o),
