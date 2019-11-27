@@ -16,12 +16,19 @@ module mem(
 
 	input wire[`reg_bus] mem_data_i,
 
+	input wire LLbit_i,
+	input wire wb_LLbit_we_i,
+	input wire wb_LLbit_value_i,
+
 	output reg[`reg_addr_bus] wd_o,
 	output reg wreg_o,
 	output reg[`reg_bus] wdata_o,
 	output reg[`reg_bus] hi_o,
 	output reg[`reg_bus] lo_o,
 	output reg whilo_o,
+
+	output reg LLbit_we_o,
+	output reg LLbit_value_o,
 
 	output reg[`reg_bus] mem_addr_o,
 	output wire mem_we_o,
@@ -30,11 +37,24 @@ module mem(
 	output reg mem_ce_o
 );
 
+reg LLbit;
 wire[`reg_bus] zero32;
 reg mem_we;
 
 assign mem_we_o = mem_we;
 assign zero32 = `zero_word;
+
+always@(*)begin
+	if(rst == `rst_enable)begin
+		LLbit <= 1'b0;
+	end else begin
+		if(wb_LLbit_we_i == 1'b1)begin
+			LLbit <= wb_LLbit_value_i;
+		end else begin
+			LLbit <= LLbit_i;
+		end
+	end
+end
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -49,6 +69,8 @@ always@(*)begin
 		mem_sel_o <= 4'b0000;
 		mem_data_o <= `zero_word;
 		mem_ce_o <= `chip_disable;
+		LLbit_we_o <= 1'b0;
+		LLbit_value_o <= 1'b0;
 	end else begin
 		wd_o <= wd_i;
 		wreg_o <= wreg_i;
@@ -201,6 +223,15 @@ always@(*)begin
 					end
 				endcase
 			end
+			`exe_ll_op:begin
+				mem_addr_o <= mem_addr_i;
+				mem_we <= `write_disable;
+				wdata_o <= mem_data_i;
+				LLbit_we_o <= 1'b1;
+				LLbit_value_o <= 1'b1;
+				mem_sel_o <= 4'b1111;
+				mem_ce_o <= `chip_enable;
+			end
 			`exe_sb_op:begin
 				mem_addr_o <= mem_addr_i;
 				mem_we <= `write_enable;
@@ -299,6 +330,20 @@ always@(*)begin
 						mem_sel_o <= 4'b0000;
 					end
 				endcase
+			end
+			`exe_sc_op:begin
+				if(LLbit == 1'b1)begin
+					LLbit_we_o <= 1'b1;
+					LLbit_value_o <= 1'b0;
+					mem_addr_o <= mem_addr_i;
+					mem_we <= `write_enable;
+					mem_data_o <= reg2_i;
+					wdata_o <= 32'b1;
+					mem_sel_o <= 4'b1111;
+					mem_ce_o <= `chip_enable;
+				end else begin
+					wdata_o <= 32'b0;
+				end
 			end
 			default:begin
 			end

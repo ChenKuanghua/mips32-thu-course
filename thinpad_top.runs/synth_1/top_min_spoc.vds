@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Nov 27 15:00:17 2019
-# Process ID: 872
+# Start of session at: Wed Nov 27 17:10:35 2019
+# Process ID: 1544
 # Current directory: C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/synth_1
 # Command line: vivado.exe -log top_min_spoc.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_min_spoc.tcl
 # Log file: C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/synth_1/top_min_spoc.vds
@@ -15,22 +15,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2760 
+INFO: Helper process launched with PID 2256 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 335.805 ; gain = 75.629
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 334.121 ; gain = 74.289
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_min_spoc' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'pc_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/pc_reg.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (1#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/pc_reg.v:3]
-WARNING: [Synth 8-6104] Input port 'rom_addr_o' has an internal driver [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:123]
+WARNING: [Synth 8-6104] Input port 'rom_addr_o' has an internal driver [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:129]
 INFO: [Synth 8-6157] synthesizing module 'if_id' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/if_id.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'if_id' (2#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/if_id.v:3]
 INFO: [Synth 8-6157] synthesizing module 'id' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:3]
 WARNING: [Synth 8-3848] Net stallreq_for_reg1_loadrelate in module/entity id does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:56]
 WARNING: [Synth 8-3848] Net stallreq_for_reg2_loadrelate in module/entity id does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'id' (3#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:3]
-WARNING: [Synth 8-350] instance 'id0' of module 'id' requires 30 connections, but only 29 given [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:135]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/regfile.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'regfile' (4#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/regfile.v:3]
 INFO: [Synth 8-6157] synthesizing module 'id_ex' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id_ex.v:3]
@@ -40,15 +39,15 @@ INFO: [Synth 8-6155] done synthesizing module 'ex' (6#1) [C:/Users/andy/Desktop/
 INFO: [Synth 8-6157] synthesizing module 'ex_mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (7#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v:3]
 INFO: [Synth 8-6157] synthesizing module 'mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:3]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:68]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:93]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:163]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:186]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:209]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:255]
-INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:281]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:90]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:115]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:185]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:208]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:240]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:286]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:312]
 INFO: [Synth 8-6155] done synthesizing module 'mem' (8#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:3]
-WARNING: [Synth 8-689] width (4) of port connection 'mem_ce_o' does not match port width (1) of module 'mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:335]
+WARNING: [Synth 8-689] width (4) of port connection 'mem_ce_o' does not match port width (1) of module 'mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:348]
 INFO: [Synth 8-6157] synthesizing module 'mem_wb' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem_wb.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (9#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem_wb.v:3]
 INFO: [Synth 8-6157] synthesizing module 'hilo_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/hilo_reg.v:3]
@@ -59,16 +58,17 @@ INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/andy/Desktop/cod19grp23
 WARNING: [Synth 8-6014] Unused sequential element tmp_op1_reg was removed.  [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:42]
 WARNING: [Synth 8-6014] Unused sequential element tmp_op2_reg was removed.  [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:47]
 INFO: [Synth 8-6155] done synthesizing module 'div' (12#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:3]
-WARNING: [Synth 8-3848] Net id_inst_o in module/entity top does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'top' (13#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'LLbit_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/LLbit_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'LLbit_reg' (13#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/LLbit_reg.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:3]
 WARNING: [Synth 8-689] width (1) of port connection 'ram_ce_o' does not match port width (4) of module 'top' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:31]
 INFO: [Synth 8-6157] synthesizing module 'inst_rom' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:24]
 INFO: [Synth 8-3876] $readmem data file 'C:/Users/andy/Desktop/inst_rom.data' is read successfully [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:31]
-INFO: [Synth 8-6155] done synthesizing module 'inst_rom' (14#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'inst_rom' (15#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:24]
 INFO: [Synth 8-6157] synthesizing module 'data_ram' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/data_ram.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'data_ram' (15#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/data_ram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'data_ram' (16#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/data_ram.v:3]
 WARNING: [Synth 8-3848] Net inst_addr in module/entity top_min_spoc does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'top_min_spoc' (16#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_min_spoc' (17#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[31]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[30]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[29]
@@ -82,6 +82,18 @@ WARNING: [Synth 8-3331] design data_ram has unconnected port addr[22]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[21]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[20]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[19]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[18]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[17]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[16]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[15]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[14]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[13]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[12]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[11]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[10]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[9]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[8]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[7]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[1]
 WARNING: [Synth 8-3331] design data_ram has unconnected port addr[0]
 WARNING: [Synth 8-3331] design inst_rom has unconnected port addr[31]
@@ -146,7 +158,7 @@ WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[3]
 WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[2]
 WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 392.840 ; gain = 133.008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -155,38 +167,6 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[31] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[30] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[29] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[28] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[27] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[26] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[25] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[24] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[23] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[22] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[21] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[20] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[19] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[1] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
-WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[0] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
 WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[31] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
 WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[30] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
 WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[29] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
@@ -240,10 +220,10 @@ WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[2] to constant 0 [C:/U
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 392.840 ; gain = 133.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 392.840 ; gain = 133.008
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -562,27 +542,27 @@ INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further insta
 Finished Parsing XDC File [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 761.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 757.332 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 761.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 757.332 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 757.332 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
@@ -608,18 +588,18 @@ INFO: [Synth 8-5546] ROM "signed_div_o" won't be mapped to RAM because it is too
 INFO: [Synth 8-5544] ROM "hilo_tmp_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cnt_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "stallreq_for_madd_msub" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "mem_we" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "mem_ce_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'div'
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "inst_mem" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "inst_mem" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp1_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:165]
 WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:155]
 WARNING: [Synth 8-327] inferring latch for variable 'cnt_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:156]
 WARNING: [Synth 8-327] inferring latch for variable 'stallreq_for_madd_msub_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:157]
-WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:70]
+WARNING: [Synth 8-327] inferring latch for variable 'LLbit_we_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'LLbit_value_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:73]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -630,7 +610,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [C:/Users/a
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'div'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -659,25 +639,24 @@ Detailed RTL Component Info :
 	                5 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 12    
 +---RAMs : 
-	            1023K Bit         RAMs := 4     
 	             1024 Bit         RAMs := 1     
+	              248 Bit         RAMs := 4     
 +---Muxes : 
 	   2 Input     65 Bit        Muxes := 5     
 	   4 Input     65 Bit        Muxes := 2     
 	   2 Input     64 Bit        Muxes := 10    
 	   3 Input     64 Bit        Muxes := 2     
 	   4 Input     64 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 56    
+	   2 Input     32 Bit        Muxes := 57    
 	   4 Input     32 Bit        Muxes := 9     
 	   7 Input     32 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 2     
 	  33 Input     32 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 3     
-	   8 Input     32 Bit        Muxes := 1     
-	  13 Input     32 Bit        Muxes := 1     
-	  34 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
+	  15 Input     32 Bit        Muxes := 2     
 	   3 Input     16 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
 	  33 Input      8 Bit        Muxes := 1     
@@ -691,9 +670,9 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 6     
 	   4 Input      5 Bit        Muxes := 3     
 	   5 Input      5 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 4     
 	   3 Input      4 Bit        Muxes := 2     
-	  13 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 4     
 	   8 Input      3 Bit        Muxes := 3     
 	  28 Input      3 Bit        Muxes := 1     
@@ -702,14 +681,13 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 3     
 	   4 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
-	  13 Input      3 Bit        Muxes := 1     
 	  33 Input      2 Bit        Muxes := 2     
 	  27 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 7     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 41    
 	  28 Input      1 Bit        Muxes := 3     
 	   5 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 3     
@@ -717,7 +695,7 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit        Muxes := 10    
 	   7 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 4     
-	  13 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -832,25 +810,24 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 5     
 	   3 Input     32 Bit        Muxes := 1     
-	   8 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 6     
-	  13 Input     32 Bit        Muxes := 1     
+	   9 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 7     
+	  15 Input     32 Bit        Muxes := 1     
 	   3 Input     16 Bit        Muxes := 1     
 	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
+	  15 Input      4 Bit        Muxes := 2     
 	   4 Input      4 Bit        Muxes := 4     
 	   3 Input      4 Bit        Muxes := 2     
-	  13 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 2     
-	  13 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	  13 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	  15 Input      1 Bit        Muxes := 6     
 Module mem_wb 
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 3     
 	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
 Module hilo_reg 
@@ -887,15 +864,21 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 6     
+Module LLbit_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module inst_rom 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  34 Input     32 Bit        Muxes := 1     
+	  15 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 Module data_ram 
 Detailed RTL Component Info : 
 +---RAMs : 
-	            1023K Bit         RAMs := 4     
+	              248 Bit         RAMs := 4     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -941,18 +924,6 @@ WARNING: [Synth 8-3331] design ex has unconnected port inst_i[27]
 WARNING: [Synth 8-3331] design ex has unconnected port inst_i[26]
 WARNING: [Synth 8-3331] design ex has unconnected port inst_i[25]
 WARNING: [Synth 8-3331] design ex has unconnected port inst_i[24]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[23]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[22]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[21]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[20]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[19]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[18]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[17]
-WARNING: [Synth 8-3331] design ex has unconnected port inst_i[16]
-WARNING: [Synth 8-3331] design ex has unconnected port is_in_delayslot_i
-WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[7]
-WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[6]
-WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[5]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp1_reg[63]) is unused and will be removed from module ex.
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp1_reg[62]) is unused and will be removed from module ex.
@@ -1056,7 +1027,7 @@ WARNING: [Synth 8-3332] Sequential element (hilo_tmp_o_reg[29]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp_o_reg[28]) is unused and will be removed from module ex.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1086,13 +1057,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1104,7 +1075,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1128,7 +1099,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1141,7 +1112,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1153,25 +1124,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1196,25 +1167,25 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 757.332 ; gain = 497.500
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 204 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 761.570 ; gain = 160.285
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 761.570 ; gain = 501.395
+Synthesis finished with 0 errors, 0 critical warnings and 208 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 757.332 ; gain = 133.008
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 757.332 ; gain = 497.500
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 760.426 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-87 Infos, 399 Warnings, 102 Critical Warnings and 0 Errors encountered.
+87 Infos, 367 Warnings, 102 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 761.570 ; gain = 501.395
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 760.426 ; gain = 500.594
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 760.426 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/synth_1/top_min_spoc.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_min_spoc_utilization_synth.rpt -pb top_min_spoc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 27 15:01:02 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 27 17:11:07 2019...

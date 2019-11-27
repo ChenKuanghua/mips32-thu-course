@@ -68,6 +68,8 @@ wire[`reg_bus] mem_wdata_o;
 wire[`reg_bus] mem_hi_o;
 wire[`reg_bus] mem_lo_o;
 wire mem_whilo_o;
+wire mem_LLbit_value_o;
+wire mem_LLbit_we_o;
 
 wire wb_wreg_i;
 wire[`reg_addr_bus] wb_wd_i;
@@ -75,6 +77,8 @@ wire[`reg_bus] wb_wdata_i;
 wire[`reg_bus] wb_hi_i;
 wire[`reg_bus] wb_lo_i;
 wire wb_whilo_i;
+wire wb_LLbit_value_i;
+wire wb_LLbit_we_i;
 
 wire reg1_read;
 wire reg2_read;
@@ -109,6 +113,8 @@ wire[`reg_bus] branch_target_address;
 wire[5:0] stall;
 wire stallreq_from_id;
 wire stallreq_from_ex;
+
+wire LLbit_o;
 
 pc_reg pc_reg0(
 	.clk(clk),
@@ -322,6 +328,12 @@ mem mem0(
 
 	.mem_data_i(ram_data_i),
 
+	.LLbit_i(LLbit_o),
+	.wb_LLbit_we_i(wb_LLbit_we_i),
+	.wb_LLbit_value_i(wb_LLbit_value_i),
+	.LLbit_we_o(mem_LLbit_we_o),
+	.LLbit_value_o(mem_LLbit_value_o),
+
 	.wd_o(mem_wd_o),
 	.wreg_o(mem_wreg_o),
 	.wdata_o(mem_wdata_o),
@@ -349,12 +361,18 @@ mem_wb mem_wb0(
 	.mem_lo(mem_lo_o),
 	.mem_whilo(mem_whilo_o),
 
+	.mem_LLbit_we(mem_LLbit_we_o),
+	.mem_LLbit_value(mem_LLbit_value_o),
+
 	.wb_wd(wb_wd_i),
 	.wb_wreg(wb_wreg_i),
 	.wb_wdata(wb_wdata_i),
 	.wb_hi(wb_hi_i),
 	.wb_lo(wb_lo_i),
-	.wb_whilo(wb_whilo_i)
+	.wb_whilo(wb_whilo_i),
+
+	.wb_LLbit_we(wb_LLbit_we_i),
+	.wb_LLbit_value(wb_LLbit_value_i)
 );
 
 hilo_reg hilo_reg0(
@@ -391,6 +409,15 @@ div div0(
 
 	.result_o(div_result),
 	.ready_o(div_ready)
+);
+
+LLbit_reg LLbit_reg0(
+	.clk(clk),
+	.rst(rst),
+	.flush(1'b0),
+	.LLbit_i(wb_LLbit_value_i),
+	.we(wb_LLbit_we_i),
+	.LLbit_o(LLbit_o)
 );
 
 endmodule
