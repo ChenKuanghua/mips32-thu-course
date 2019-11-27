@@ -6,7 +6,14 @@ module top(
 
 	input wire[`reg_bus] rom_data_i,
 	input wire[`reg_bus] rom_addr_o,
-	output wire rom_ce_o
+	output wire rom_ce_o,
+
+	input wire[`reg_bus] ram_data_i,
+	output wire[`reg_bus] ram_addr_o,
+	output wire[`reg_bus] ram_data_o,
+	output wire ram_we_o,
+	output wire[3:0] ram_sel_o,
+	output wire[3:0] ram_ce_o
 );
 
 wire[`inst_addr_bus] pc;
@@ -21,6 +28,7 @@ wire id_wreg_o;
 wire[`reg_addr_bus] id_wd_o;
 wire id_is_in_delayslot_o;
 wire[`reg_bus] id_link_address_o;
+wire[`reg_bus] id_inst_o;
 
 wire[`alu_op_bus] ex_aluop_i;
 wire[`alu_sel_bus] ex_alusel_i;
@@ -30,6 +38,7 @@ wire ex_wreg_i;
 wire[`reg_addr_bus] ex_wd_i;
 wire ex_is_in_delayslot_i;
 wire[`reg_bus] ex_link_address_i;
+wire[`reg_bus] ex_inst_i;
 
 wire ex_wreg_o;
 wire[`reg_addr_bus] ex_wd_o;
@@ -37,6 +46,10 @@ wire[`reg_bus] ex_wdata_o;
 wire[`reg_bus] ex_hi_o;
 wire[`reg_bus] ex_lo_o;
 wire ex_whilo_o;
+wire[`alu_op_bus] ex_aluop_o;
+wire[`reg_bus] ex_mem_addr_o;
+wire[`reg_bus] ex_reg1_o;
+wire[`reg_bus] ex_reg2_o;
 
 wire mem_wreg_i;
 wire[`reg_addr_bus] mem_wd_i;
@@ -44,6 +57,10 @@ wire[`reg_bus] mem_wdata_i;
 wire[`reg_bus] mem_hi_i;
 wire[`reg_bus] mem_lo_i;
 wire mem_whilo_i;
+wire[`alu_op_bus] mem_aluop_i;
+wire[`reg_bus] mem_mem_addr_i;
+wire[`reg_bus] mem_reg1_i;
+wire[`reg_bus] mem_reg2_i;
 
 wire mem_wreg_o;
 wire[`reg_addr_bus] mem_wd_o;
@@ -120,6 +137,8 @@ id id0(
 	.pc_i(id_pc_i),
 	.inst_i(id_inst_i),
 
+	.ex_aluop_i(ex_aluop_o),
+
 	.reg1_data_i(reg1_data),
 	.reg2_data_i(reg2_data),
 
@@ -145,6 +164,7 @@ id id0(
 	.reg2_o(id_reg2_o),
 	.wd_o(id_wd_o),
 	.wreg_o(id_wreg_o),
+	.inst_o(id_inst_o),
 
 	.next_inst_in_delayslot_o(next_inst_in_delayslot_o),
 	.branch_flag_o(id_branch_flag_o),
@@ -185,6 +205,7 @@ id_ex id_ex0(
 	.id_link_address(id_link_address_o),
 	.id_is_in_delayslot(id_is_in_delayslot_o),
 	.next_inst_in_delayslot_i(next_inst_in_delayslot_o),
+	.id_inst(id_inst_o),
 
 	.ex_aluop(ex_aluop_i),
 	.ex_alusel(ex_alusel_i),
@@ -194,7 +215,8 @@ id_ex id_ex0(
 	.ex_wreg(ex_wreg_i),
 	.ex_link_address(ex_link_address_i),
 	.ex_is_in_delayslot(ex_is_in_delayslot_i),
-	.is_in_delayslot_o(is_in_delayslot_i)
+	.is_in_delayslot_o(is_in_delayslot_i),
+	.ex_inst(ex_inst_i)
 );
 
 ex ex0(
@@ -208,6 +230,7 @@ ex ex0(
 	.wreg_i(ex_wreg_i),
 	.hi_i(hi),
 	.lo_i(lo),
+	.inst_i(ex_inst_i),
 
 	.wb_hi_i(wb_hi_i),
 	.wb_lo_i(wb_lo_i),
@@ -241,6 +264,10 @@ ex ex0(
 	.div_start_o(div_start),
 	.signed_div_o(signed_div),
 
+	.aluop_o(ex_aluop_o),
+	.mem_addr_o(ex_mem_addr_o),
+	.reg2_o(ex_reg2_o),
+
 	.stallreq(stallreq_from_ex)
 );
 
@@ -257,6 +284,10 @@ ex_mem ex_mem0(
 	.ex_lo(ex_lo_o),
 	.ex_whilo(ex_whilo_o),
 
+	.ex_aluop(ex_aluop_o),
+	.ex_mem_addr(ex_mem_addr_o),
+	.ex_reg2(ex_reg2_o),
+
 	.hilo_i(hilo_tmp_o),
 	.cnt_i(cnt_o),
 
@@ -266,6 +297,10 @@ ex_mem ex_mem0(
 	.mem_hi(mem_hi_i),
 	.mem_lo(mem_lo_i),
 	.mem_whilo(mem_whilo_i),
+
+	.mem_aluop(mem_aluop_i),
+	.mem_mem_addr(mem_mem_addr_i),
+	.mem_reg2(mem_reg2_i),
 
 	.hilo_o(hilo_tmp_i),
 	.cnt_o(cnt_i)
@@ -281,12 +316,24 @@ mem mem0(
 	.lo_i(mem_lo_i),
 	.whilo_i(mem_whilo_i),
 
+	.aluop_i(mem_aluop_i),
+	.mem_addr_i(mem_mem_addr_i),
+	.reg2_i(mem_reg2_i),
+
+	.mem_data_i(ram_data_i),
+
 	.wd_o(mem_wd_o),
 	.wreg_o(mem_wreg_o),
 	.wdata_o(mem_wdata_o),
 	.hi_o(mem_hi_o),
 	.lo_o(mem_lo_o),
-	.whilo_o(mem_whilo_o)
+	.whilo_o(mem_whilo_o),
+	
+	.mem_addr_o(ram_addr_o),
+	.mem_we_o(ram_we_o),
+	.mem_sel_o(ram_sel_o),
+	.mem_data_o(ram_data_o),
+	.mem_ce_o(ram_ce_o)
 );
 
 mem_wb mem_wb0(

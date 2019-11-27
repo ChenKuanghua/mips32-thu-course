@@ -14,19 +14,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1640 
+INFO: Helper process launched with PID 2760 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 334.129 ; gain = 76.160
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 335.805 ; gain = 75.629
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_min_spoc' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'pc_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/pc_reg.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'pc_reg' (1#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/pc_reg.v:3]
-WARNING: [Synth 8-6104] Input port 'rom_addr_o' has an internal driver [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:106]
+WARNING: [Synth 8-6104] Input port 'rom_addr_o' has an internal driver [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:123]
 INFO: [Synth 8-6157] synthesizing module 'if_id' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/if_id.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'if_id' (2#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/if_id.v:3]
 INFO: [Synth 8-6157] synthesizing module 'id' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:3]
+WARNING: [Synth 8-3848] Net stallreq_for_reg1_loadrelate in module/entity id does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:56]
+WARNING: [Synth 8-3848] Net stallreq_for_reg2_loadrelate in module/entity id does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'id' (3#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id.v:3]
+WARNING: [Synth 8-350] instance 'id0' of module 'id' requires 30 connections, but only 29 given [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:135]
 INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/regfile.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'regfile' (4#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/regfile.v:3]
 INFO: [Synth 8-6157] synthesizing module 'id_ex' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/id_ex.v:3]
@@ -36,7 +39,15 @@ INFO: [Synth 8-6155] done synthesizing module 'ex' (6#1) [C:/Users/andy/Desktop/
 INFO: [Synth 8-6157] synthesizing module 'ex_mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'ex_mem' (7#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex_mem.v:3]
 INFO: [Synth 8-6157] synthesizing module 'mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:3]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:68]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:93]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:163]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:186]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:209]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:255]
+INFO: [Synth 8-226] default block is never used [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:281]
 INFO: [Synth 8-6155] done synthesizing module 'mem' (8#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:3]
+WARNING: [Synth 8-689] width (4) of port connection 'mem_ce_o' does not match port width (1) of module 'mem' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:335]
 INFO: [Synth 8-6157] synthesizing module 'mem_wb' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem_wb.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'mem_wb' (9#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem_wb.v:3]
 INFO: [Synth 8-6157] synthesizing module 'hilo_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/hilo_reg.v:3]
@@ -47,12 +58,31 @@ INFO: [Synth 8-6157] synthesizing module 'div' [C:/Users/andy/Desktop/cod19grp23
 WARNING: [Synth 8-6014] Unused sequential element tmp_op1_reg was removed.  [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:42]
 WARNING: [Synth 8-6014] Unused sequential element tmp_op2_reg was removed.  [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:47]
 INFO: [Synth 8-6155] done synthesizing module 'div' (12#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/div.v:3]
+WARNING: [Synth 8-3848] Net id_inst_o in module/entity top does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'top' (13#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:3]
+WARNING: [Synth 8-689] width (1) of port connection 'ram_ce_o' does not match port width (4) of module 'top' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:31]
 INFO: [Synth 8-6157] synthesizing module 'inst_rom' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:24]
 INFO: [Synth 8-3876] $readmem data file 'C:/Users/andy/Desktop/inst_rom.data' is read successfully [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'inst_rom' (14#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/inst_rom.v:24]
+INFO: [Synth 8-6157] synthesizing module 'data_ram' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/data_ram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'data_ram' (15#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/data_ram.v:3]
 WARNING: [Synth 8-3848] Net inst_addr in module/entity top_min_spoc does not have driver. [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'top_min_spoc' (15#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'top_min_spoc' (16#1) [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:3]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[31]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[30]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[29]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[28]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[27]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[26]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[25]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[24]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[23]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[22]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[21]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[20]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[19]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[1]
+WARNING: [Synth 8-3331] design data_ram has unconnected port addr[0]
 WARNING: [Synth 8-3331] design inst_rom has unconnected port addr[31]
 WARNING: [Synth 8-3331] design inst_rom has unconnected port addr[30]
 WARNING: [Synth 8-3331] design inst_rom has unconnected port addr[29]
@@ -76,11 +106,35 @@ WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[5]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[2]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[1]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[0]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[31]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[30]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[29]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[28]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[27]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[26]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[25]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[24]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[23]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[22]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[21]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[20]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[19]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[18]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[17]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[16]
 WARNING: [Synth 8-3331] design ex has unconnected port is_in_delayslot_i
 WARNING: [Synth 8-3331] design id_ex has unconnected port stall[5]
 WARNING: [Synth 8-3331] design id_ex has unconnected port stall[4]
 WARNING: [Synth 8-3331] design id_ex has unconnected port stall[1]
 WARNING: [Synth 8-3331] design id_ex has unconnected port stall[0]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[7]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[6]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[5]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[4]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[3]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[2]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[1]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[0]
 WARNING: [Synth 8-3331] design if_id has unconnected port stall[5]
 WARNING: [Synth 8-3331] design if_id has unconnected port stall[4]
 WARNING: [Synth 8-3331] design if_id has unconnected port stall[3]
@@ -91,7 +145,7 @@ WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[3]
 WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[2]
 WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 390.945 ; gain = 132.977
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -100,63 +154,95 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[31] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[30] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[29] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[28] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[27] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[26] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[25] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[24] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[23] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[22] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[21] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[20] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[19] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[1] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[0] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:12]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
-WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:20]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[31] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[30] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[29] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[28] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[27] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[26] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[25] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[24] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[23] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[22] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[21] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[20] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[19] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[1] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin id_ex0:id_inst[0] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top.v:192]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[31] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[30] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[29] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[28] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[27] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[26] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[25] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[24] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[23] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[22] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[21] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[20] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[19] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[1] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin top0:rom_addr_o[0] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:18]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[18] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[17] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[16] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[15] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[14] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[13] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[12] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[11] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[10] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[9] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[8] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[7] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[6] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[5] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[4] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[3] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
+WARNING: [Synth 8-3295] tying undriven pin inst_rom0:addr[2] to constant 0 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/top_min_spoc.v:34]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 390.945 ; gain = 132.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 390.945 ; gain = 132.977
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 420.461 ; gain = 160.285
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -475,27 +561,27 @@ INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further insta
 Finished Parsing XDC File [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 752.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 761.570 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 752.406 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 752.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 761.570 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "reg1_read_o" won't be mapped to RAM because it is too sparse
@@ -516,20 +602,23 @@ INFO: [Synth 8-5546] ROM "signed_div_o" won't be mapped to RAM because it is too
 INFO: [Synth 8-5544] ROM "hilo_tmp_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cnt_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "stallreq_for_madd_msub" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:299]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:308]
 INFO: [Synth 8-5546] ROM "signed_div_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "hilo_tmp_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "cnt_o" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "stallreq_for_madd_msub" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "mem_we" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_ce_o" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'div'
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "inst_mem" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp1_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:156]
-WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:146]
-WARNING: [Synth 8-327] inferring latch for variable 'cnt_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:147]
-WARNING: [Synth 8-327] inferring latch for variable 'stallreq_for_madd_msub_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:148]
+WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp1_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:165]
+WARNING: [Synth 8-327] inferring latch for variable 'hilo_tmp_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:155]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:156]
+WARNING: [Synth 8-327] inferring latch for variable 'stallreq_for_madd_msub_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/ex.v:157]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_data_o_reg' [C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.srcs/sources_1/new/cpu/mem.v:50]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -540,7 +629,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'stallreq_for_madd_msub_reg'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'div'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -555,7 +644,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     64 Bit       Adders := 4     
 	   3 Input     33 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 10    
+	   2 Input     32 Bit       Adders := 11    
 	   2 Input      6 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
@@ -563,14 +652,15 @@ Detailed RTL Component Info :
 +---Registers : 
 	               65 Bit    Registers := 1     
 	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 15    
-	                8 Bit    Registers := 1     
+	               32 Bit    Registers := 18    
+	                8 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 9     
 +---RAMs : 
+	            1023K Bit         RAMs := 4     
 	             1024 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     65 Bit        Muxes := 5     
@@ -578,16 +668,20 @@ Detailed RTL Component Info :
 	   2 Input     64 Bit        Muxes := 10    
 	   3 Input     64 Bit        Muxes := 2     
 	   4 Input     64 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 51    
-	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 56    
+	   4 Input     32 Bit        Muxes := 9     
+	   7 Input     32 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 2     
-	  19 Input     32 Bit        Muxes := 1     
-	   3 Input     32 Bit        Muxes := 2     
-	  36 Input     32 Bit        Muxes := 1     
+	  33 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 3     
+	   8 Input     32 Bit        Muxes := 1     
+	  13 Input     32 Bit        Muxes := 1     
+	  34 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	  19 Input      8 Bit        Muxes := 1     
+	  33 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 3     
-	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 2     
 	  28 Input      7 Bit        Muxes := 1     
 	   5 Input      7 Bit        Muxes := 1     
 	  33 Input      6 Bit        Muxes := 2     
@@ -596,28 +690,33 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 6     
 	   4 Input      5 Bit        Muxes := 3     
 	   5 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
-	   8 Input      3 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 2     
+	  13 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 4     
+	   8 Input      3 Bit        Muxes := 3     
 	  28 Input      3 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
-	  19 Input      3 Bit        Muxes := 1     
+	  33 Input      3 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 3     
 	   4 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
-	  19 Input      2 Bit        Muxes := 2     
+	  13 Input      3 Bit        Muxes := 1     
+	  33 Input      2 Bit        Muxes := 2     
 	  27 Input      2 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
 	   5 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 7     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 33    
+	   2 Input      1 Bit        Muxes := 35    
 	  28 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 3     
-	  19 Input      1 Bit        Muxes := 3     
+	  33 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 10    
 	   7 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -647,10 +746,11 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 12    
+	   7 Input     32 Bit        Muxes := 1     
 	   5 Input     32 Bit        Muxes := 1     
-	  19 Input     32 Bit        Muxes := 1     
+	  33 Input     32 Bit        Muxes := 1     
 	   8 Input      8 Bit        Muxes := 1     
-	  19 Input      8 Bit        Muxes := 1     
+	  33 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 3     
 	   4 Input      8 Bit        Muxes := 1     
 	  28 Input      7 Bit        Muxes := 1     
@@ -658,18 +758,18 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 5     
 	   4 Input      5 Bit        Muxes := 3     
 	   5 Input      5 Bit        Muxes := 1     
-	   8 Input      3 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 3     
 	  28 Input      3 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
-	  19 Input      3 Bit        Muxes := 1     
+	  33 Input      3 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 3     
 	   4 Input      3 Bit        Muxes := 1     
-	  19 Input      2 Bit        Muxes := 2     
+	  33 Input      2 Bit        Muxes := 2     
 	  27 Input      2 Bit        Muxes := 1     
 	  28 Input      1 Bit        Muxes := 3     
-	   5 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 3     
 	   8 Input      1 Bit        Muxes := 3     
-	  19 Input      1 Bit        Muxes := 3     
+	  33 Input      1 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 4     
 Module regfile 
@@ -681,7 +781,7 @@ Detailed RTL Component Info :
 Module id_ex 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
@@ -692,7 +792,7 @@ Module ex
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     64 Bit       Adders := 4     
-	   2 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 4     
 	   2 Input      6 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
@@ -717,7 +817,8 @@ Module ex_mem
 Detailed RTL Component Info : 
 +---Registers : 
 	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 5     
+	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
@@ -728,8 +829,21 @@ Detailed RTL Component Info :
 Module mem 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 1     
+	   8 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 6     
+	  13 Input     32 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 2     
+	  13 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	  13 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 2     
 Module mem_wb 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -775,8 +889,14 @@ Detailed RTL Component Info :
 Module inst_rom 
 Detailed RTL Component Info : 
 +---Muxes : 
-	  36 Input     32 Bit        Muxes := 1     
+	  34 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
+Module data_ram 
+Detailed RTL Component Info : 
++---RAMs : 
+	            1023K Bit         RAMs := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -812,12 +932,27 @@ WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[5]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[2]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[1]
 WARNING: [Synth 8-3331] design ex_mem has unconnected port stall[0]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[31]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[30]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[29]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[28]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[27]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[26]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[25]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[24]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[23]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[22]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[21]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[20]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[19]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[18]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[17]
+WARNING: [Synth 8-3331] design ex has unconnected port inst_i[16]
 WARNING: [Synth 8-3331] design ex has unconnected port is_in_delayslot_i
-WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[5]
-WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[4]
-WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[3]
-WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[2]
-WARNING: [Synth 8-3331] design pc_reg has unconnected port stall[1]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[7]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[6]
+WARNING: [Synth 8-3331] design id has unconnected port ex_aluop_i[5]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp1_reg[63]) is unused and will be removed from module ex.
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp1_reg[62]) is unused and will be removed from module ex.
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp1_reg[61]) is unused and will be removed from module ex.
@@ -920,7 +1055,7 @@ WARNING: [Synth 8-3332] Sequential element (hilo_tmp_o_reg[29]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (hilo_tmp_o_reg[28]) is unused and will be removed from module ex.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -950,13 +1085,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -968,7 +1103,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -992,7 +1127,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1005,7 +1140,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1017,25 +1152,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1060,25 +1195,25 @@ Report Instance Areas:
 |1     |top      |       |     0|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 761.570 ; gain = 501.395
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 147 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 752.406 ; gain = 132.977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 752.406 ; gain = 494.438
+Synthesis finished with 0 errors, 0 critical warnings and 204 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 761.570 ; gain = 160.285
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 761.570 ; gain = 501.395
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 758.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 307 Warnings, 102 Critical Warnings and 0 Errors encountered.
+87 Infos, 399 Warnings, 102 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 758.055 ; gain = 500.086
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 758.055 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 761.570 ; gain = 501.395
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.570 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/andy/Desktop/cod19grp23-master/thinpad_top.runs/synth_1/top_min_spoc.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_min_spoc_utilization_synth.rpt -pb top_min_spoc_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 24 18:58:07 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 27 15:01:02 2019...

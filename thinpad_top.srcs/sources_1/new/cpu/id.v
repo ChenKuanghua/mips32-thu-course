@@ -4,6 +4,8 @@ module id(
 	input wire rst,
 	input wire[`inst_addr_bus] pc_i,
 	input wire[`inst_bus] inst_i,
+	
+	input wire[`alu_op_bus] ex_aluop_i,
 
 	input wire ex_wreg_i,
 	input wire[`reg_bus] ex_wdata_i,
@@ -29,6 +31,7 @@ module id(
 	output reg[`reg_bus] reg2_o,
 	output reg[`reg_addr_bus] wd_o,
 	output reg wreg_o,
+	output wire[`reg_bus] inst_o,
 
 	output reg next_inst_in_delayslot_o,
 
@@ -50,10 +53,24 @@ wire[`reg_bus] pc_plus_8;
 wire[`reg_bus] pc_plus_4;
 wire[`reg_bus] imm_sll2_signedext;
 
+reg stallreq_for_reg1_loadrelate;
+reg stallreq_for_reg2_loadrelate;
+wire pre_inst_is_load;
+
 assign pc_plus_8 = pc_i+8;
 assign pc_plus_4 = pc_i+4;
 assign imm_sll2_signedext = {{14{inst_i[15]}}, inst_i[15:0], 2'b00};
-assign stallreq = `no_stop;
+assign stallreq = stallreq_for_reg1_loadrelate | stallreq_for_reg2_loadrelate;
+assign pre_inst_is_load = ((ex_aluop_i == `exe_lb_op)||
+						   (ex_aluop_i == `exe_lbu_op)||
+						   (ex_aluop_i == `exe_lh_op)||
+						   (ex_aluop_i == `exe_lhu_op)||
+						   (ex_aluop_i == `exe_lw_op)||
+						   (ex_aluop_i == `exe_lwr_op)||
+						   (ex_aluop_i == `exe_lwl_op)||
+						   (ex_aluop_i == `exe_ll_op)||
+						   (ex_aluop_i == `exe_sc_op))?1'b1:1'b0;
+assign inst_o = inst_i;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
@@ -472,6 +489,127 @@ always@(*)begin
 					branch_flag_o <= `branch;
 					next_inst_in_delayslot_o <= `in_delay_slot;
 				end
+			end
+			`exe_lb:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lb_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lbu:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lbu_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lh:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lh_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lhu:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lhu_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lw:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lw_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_ll:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_ll_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b0;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lwl:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lwl_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_lwr:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_lwr_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
+			end
+			`exe_sb:begin
+				wreg_o <= `write_disable;
+				aluop_o <= `exe_sb_op;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				inst_valid <= `inst_valid;
+				alusel_o <= `exe_res_load_store;
+			end
+			`exe_sh:begin
+				wreg_o <= `write_disable;
+				aluop_o <= `exe_sh_op;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				inst_valid <= `inst_valid;
+				alusel_o <= `exe_res_load_store;
+			end
+			`exe_sw:begin
+				wreg_o <= `write_disable;
+				aluop_o <= `exe_sw_op;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				inst_valid <= `inst_valid;
+				alusel_o <= `exe_res_load_store;
+			end
+			`exe_swl:begin
+				wreg_o <= `write_disable;
+				aluop_o <= `exe_swl_op;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				inst_valid <= `inst_valid;
+				alusel_o <= `exe_res_load_store;
+			end
+			`exe_swr:begin
+				wreg_o <= `write_disable;
+				aluop_o <= `exe_swr_op;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				inst_valid <= `inst_valid;
+				alusel_o <= `exe_res_load_store;
+			end
+			`exe_sc:begin
+				wreg_o <= `write_enable;
+				aluop_o <= `exe_sc_op;
+				alusel_o <= `exe_res_load_store;
+				reg1_read_o <= 1'b1;
+				reg2_read_o <= 1'b1;
+				wd_o <= inst_i[20:16];
+				inst_valid <= `inst_valid;
 			end
 			`exe_regimm_inst:begin
 				case(op4)

@@ -88,6 +88,21 @@
 `define exe_bltzal 5'b10000 
 `define exe_bne 6'b000101
 
+`define exe_lb 6'b100000 
+`define exe_lbu 6'b100100 
+`define exe_lh 6'b100001 
+`define exe_lhu 6'b100101 
+`define exe_ll 6'b110000 
+`define exe_lw 6'b100011 
+`define exe_lwl 6'b100010 
+`define exe_lwr 6'b100110 
+`define exe_sb 6'b101000 
+`define exe_sc 6'b111000 
+`define exe_sh 6'b101001 
+`define exe_sw 6'b101011 
+`define exe_swl 6'b101010 
+`define exe_swr 6'b101110 
+
 `define exe_nop 6'b000000
 `define ssnop 32'b00000000000000000000000001000000
 
@@ -156,6 +171,23 @@
 `define exe_bltzal_op 8'b01001010 
 `define exe_bne_op 8'b01010010
 
+`define exe_lb_op 8'b11100000 
+`define exe_lbu_op 8'b11100100 
+`define exe_lh_op 8'b11100001 
+`define exe_lhu_op 8'b11100101 
+`define exe_ll_op 8'b11110000 
+`define exe_lw_op 8'b11100011 
+`define exe_lwl_op 8'b11100010 
+`define exe_lwr_op 8'b11100110 
+`define exe_pref_op 8'b11110011
+`define exe_sb_op 8'b11101000 
+`define exe_sc_op 8'b11111000 
+`define exe_sh_op 8'b11101001 
+`define exe_sw_op 8'b11101011 
+`define exe_swl_op 8'b11101010
+`define exe_swr_op 8'b11101110 
+`define exe_sync_op 8'b00001111
+
 `define exe_nop_op 8'b00000000
 
 //alu_sel
@@ -165,6 +197,7 @@
 `define exe_res_arithmetic 3'b100 
 `define exe_res_mul 3'b101
 `define exe_res_jump_branch 3'b110
+`define exe_res_load_store 3'b111
 
 `define exe_res_nop 3'b000
 
@@ -173,6 +206,11 @@
 `define inst_bus 31:0
 `define inst_mem_num 131071
 `define inst_mem_num_log2 17
+`define data_addr_bus 31:0
+`define data_bus 31:0
+`define data_mem_num 31
+`define data_mem_num_log2 5
+`define byte_width 7:0
 `define reg_addr_bus 4:0
 `define reg_bus 31:0
 `define reg_width 32

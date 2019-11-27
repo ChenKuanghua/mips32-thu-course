@@ -16,6 +16,7 @@ module id_ex(
 	input wire[`reg_bus] id_link_address,
 	input wire id_is_in_delayslot,
 	input wire next_inst_in_delayslot_i,
+	input wire[`reg_bus] id_inst,
 
 	output reg[`alu_op_bus] ex_aluop,
 	output reg[`alu_sel_bus] ex_alusel,
@@ -26,7 +27,8 @@ module id_ex(
 
 	output reg[`reg_bus] ex_link_address,
 	output reg ex_is_in_delayslot,
-	output reg is_in_delayslot_o
+	output reg is_in_delayslot_o,
+	output reg[`reg_bus] ex_inst
 );
 
 always@(posedge clk)begin
@@ -40,6 +42,7 @@ always@(posedge clk)begin
 		ex_link_address <= `zero_word;
 		ex_is_in_delayslot <= `not_in_delay_slot;
 		is_in_delayslot_o <= `not_in_delay_slot;
+		ex_inst <= `zero_word;
 	end else if(stall[2] == `stop && stall[3] == `no_stop)begin
 		ex_aluop <= `exe_nop_op;
 		ex_alusel <= `exe_res_nop;
@@ -49,6 +52,7 @@ always@(posedge clk)begin
 		ex_wreg <= `write_disable;
 		ex_link_address <= `zero_word;
 		ex_is_in_delayslot <= `not_in_delay_slot;
+		ex_inst <= `zero_word;
 	end else if(stall[2] == `no_stop)begin
 		ex_aluop <= id_aluop;
 		ex_alusel <= id_alusel;
@@ -59,6 +63,7 @@ always@(posedge clk)begin
 		ex_link_address <= id_link_address;
 		ex_is_in_delayslot <= id_is_in_delayslot;
 		is_in_delayslot_o <= next_inst_in_delayslot_i;
+		ex_inst <= id_inst;
 	end
 end
 

@@ -9,6 +9,7 @@ module ex(
 	input wire[`reg_bus] reg2_i,
 	input wire[`reg_addr_bus] wd_i,
 	input wire wreg_i,
+	input wire[`reg_bus] inst_i,
 
 	input wire[`reg_bus] hi_i,
 	input wire[`reg_bus] lo_i,
@@ -46,6 +47,10 @@ module ex(
 	output reg div_start_o,
 	output reg signed_div_o,
 
+	output wire[`alu_op_bus] aluop_o,
+	output wire[`reg_bus] mem_addr_o,
+	output wire[`reg_bus] reg2_o,
+
 	output reg stallreq
 );
 
@@ -68,6 +73,10 @@ wire[`double_reg_bus] hilo_tmp;
 reg[`double_reg_bus] hilo_tmp1;
 reg stallreq_for_madd_msub;
 reg stallreq_for_div;
+
+assign aluop_o = aluop_i;
+assign mem_addr_o = reg1_i+{{16{inst_i[15]}}, inst_i[15:0]};
+assign reg2_o = reg2_i;
 
 always@(*)begin
 	if(rst == `rst_enable)begin
